@@ -14,3 +14,5 @@ function countAlphabet(value){
 let str = "AAABBC"
 let output = countAlphabet(str)
 console.log(output);
+let rev = str.split('').reverse().join('')
+console.log(rev);
