@@ -13,15 +13,40 @@ class hashTable{
     }
     set(key,value){
         let index = this.hash(key)
-        this.table[index] = value
+        // this.table[index] = value
+        const bucket = this.table[index]
+        if(!bucket){
+            this.table[index] = [[key,value]]
+        }else{
+            let sameKey = bucket.find(item=>item[0]===key)
+            if(sameKey){
+                sameKey[1] = value
+            }else{
+                bucket.push([key,value])
+            }
+        }
     }
     get(key){
         let index = this.hash(key)
-        return this.table[index]
+        // return this.table[index]
+        const bucket = this.table[index]
+        if(bucket){
+            let sameKey = bucket.find(item=>item[0]===key)
+            if(sameKey){
+                return sameKey[1]
+            }
+        }
     }
     remove(key){
         let index = this.hash(key)
-        this.table[index] = undefined
+        // this.table[index] = undefined
+        const bucket = this.table[index]
+        if(bucket){
+            let sameKey = bucket.find(item=>item[0]===key)
+            if(sameKey){
+                bucket.splice(bucket.indexOf(sameKey),1)
+            }
+        }
     }
     display(){
         for(let i=0; i<this.table.length; i++){
@@ -38,3 +63,8 @@ table.display()
 console.log(table.get("name"));
 table.remove("name")
 console.log(table.get("name"));
+table.set('aeg',23)
+table.set('name','rilwan')
+table.set("mane","shamis")
+table.remove("name")
+table.display()
