@@ -40,3 +40,4 @@ queue.print()
 console.log(queue.getSize());
 console.log(queue.isEmpty());
 console.log(queue.dequeue());
+queue.print()

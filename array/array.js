@@ -40,3 +40,8 @@ function secondLargest(arr1){
     return secondLargest
 }
     console.log(secondLargest([4,3,21,7,82,8,9,22,33]));
+
+    let values = [2,3,8,2,4,5,6,4]
+    let m=3
+    values.splice(m)
+    console.log(values);
