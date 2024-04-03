@@ -1,7 +1,7 @@
 class Queue{
     constructor(){
-        this.items = {}
-        this.rear = 0
+        this.items = []
+        this.rear = 0       
         this.front = 0
     }
     enqueue(values){
@@ -13,7 +13,7 @@ class Queue{
             return "queue is empty"
         }
         let val = this.items[this.front]
-        delete this.items[this.front]
+        this.items.splice(this.front,1)
         this.front++
         return val
     }
@@ -37,7 +37,7 @@ queue.enqueue(4)
 queue.enqueue(5)
 queue.enqueue(6)
 queue.print()
-console.log(queue.getSize());
-console.log(queue.isEmpty());
+console.log(queue.dequeue());
+queue.print()
 console.log(queue.dequeue());
 queue.print()

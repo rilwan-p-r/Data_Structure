@@ -9,7 +9,7 @@ function insertionSort(arr){
         arr[j+1] = current
     }
 }
-
+    
 let arr = [-2,6,5,2,-1]
 insertionSort(arr)
 console.log(arr);

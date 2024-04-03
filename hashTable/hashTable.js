@@ -66,5 +66,6 @@ console.log(table.get("name"));
 table.set('aeg',23)
 table.set('name','rilwan')
 table.set("mane","shamis")
-table.remove("name")
+
 table.display()
+console.log(table.get('mane'));

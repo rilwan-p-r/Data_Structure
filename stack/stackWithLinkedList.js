@@ -19,7 +19,7 @@ class Stack{
         let val
         if(this.isEmpty()){
             return "list is empty"
-        }else{
+        }else{  
             val = this.top
             this.top = val.next
         }

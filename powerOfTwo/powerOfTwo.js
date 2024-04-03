@@ -13,3 +13,5 @@ function isPower(n){
 console.log(isPower(4));
 console.log(isPower(8));
 // Big-O = O(logn)
+let d='hbbj'
+console.log(d.length);
