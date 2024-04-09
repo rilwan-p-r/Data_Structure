@@ -38,7 +38,7 @@ class heap{
             let smallestIndex = this.getLeftChild(current)
             if(this.data[this.getRightChild(current)]!==undefined &&
             this.getLeftChild(current)>this.getRightChild(current) ){
-                smallestIndex = this.getLeftChild(current)
+                smallestIndex = this.getRightChild(current)
             }
             if(this.data[current]>this.data[smallestIndex]){
                 this.swap(current,smallestIndex)
@@ -51,6 +51,14 @@ let heapfy = new heap()
 heapfy.push(10)
 heapfy.push(4)
 heapfy.push(31)
+heapfy.push(1)
+heapfy.push(11)
+heapfy.push(21)
+heapfy.push(12)
+console.log(heapfy.data);
+console.log(heapfy.poll());
+console.log(heapfy.data);
+console.log(heapfy.poll());
 console.log(heapfy.data);
 console.log(heapfy.poll());
 console.log(heapfy.data);

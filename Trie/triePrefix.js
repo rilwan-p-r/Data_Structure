@@ -41,6 +41,28 @@ class Trie{
         }
         return true
     }
+    prefixRecom(value){
+        let node =this.root
+        for(let char of value){
+            if(!node.children[char]){
+                return []
+            }
+            node=node.children[char]
+        }
+        return this.getAllwords(node,value)
+    }
+    getAllwords(node,value){
+        let words=[]
+        if(node.isWordEnd){
+            words.push(value)
+        }
+        for(let char in node.children){
+            let childNode=node.children[char]
+            let prefix= value+char
+            words= words.concat(this.getAllwords(childNode,prefix))
+        }
+        return words
+    }
 }
 
 let trie = new Trie()

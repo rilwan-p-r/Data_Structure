@@ -44,11 +44,13 @@ class binaryTree{
                 return true
             }else if(value<root.value){
                 return this.search(root.left,value)
-            }else{
+            }else{  
                 return this.search(root.right,value)
             }
         }
     }
+
+    // Depth first search(DFS)
     preorder(root){
         if(root){
             console.log(root.value);
@@ -70,6 +72,7 @@ class binaryTree{
             console.log(root.value);
         }
     }
+    // Breadth first search(BFS)
     levelOrder(){
         // queue implementation
         let queue=[]
@@ -129,10 +132,20 @@ let tree = new binaryTree()
 console.log(tree.isEmpty());
 tree.insert(10)
 tree.insert(5)
+tree.insert(7)
 tree.insert(15)
 tree.insert(3)
 // tree.insert(7)
-tree.levelOrder()
-tree.delete(10)
-console.log("after");
-tree.levelOrder()
+tree.inorder(tree.root)
+console.log(tree.search(tree.root,22));
+console.log(tree.delete(7));
+// tree.inorder(tree.root)
+function treee(arr){
+    let tree1=new binaryTree()
+    for(let ar of arr){
+        tree1.insert(ar)
+    }
+    console.log(tree1.max(tree1.root));
+}
+let arr=[4,3,2,5,3]
+treee(arr)
