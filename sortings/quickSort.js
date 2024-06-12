@@ -14,7 +14,7 @@ function quickSort(arr){
     }
     return [...quickSort(left),pivot,...quickSort(right)]
 }
-let arr = [8,-20,6,7,1] //[-20,1,6,7,8]
+let arr = [7,1] //[-20,1,6,7,8]
 console.log(quickSort(arr))
 
 let h = ["hello world"]

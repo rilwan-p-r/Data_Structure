@@ -23,7 +23,12 @@ class Graph{
         }
     }
     hasEdge(vertex1,vertex2){
-        return this.adjecencyList[vertex1].has(vertex2) && this.adjecencyList[vertex2].has(vertex1)
+        if(this.adjecencyList[vertex1]&&this.adjecencyList[vertex2]){
+
+            return this.adjecencyList[vertex1].has(vertex2) && this.adjecencyList[vertex2].has(vertex1)
+        }else{
+            console.log('value not founded')
+        }
     }
     removeEdge(vertex1,vertex2){
         this.adjecencyList[vertex1].delete(vertex2)
@@ -40,13 +45,13 @@ class Graph{
     }
 }
 let graph = new Graph()
-graph.addVertex("A")
-graph.addVertex("B")
-graph.addVertex("C")
+graph.addVertex(8)
+graph.addVertex(7)
+graph.addVertex(5)
 
-graph.addEdge("A","B")
+graph.addEdge(7,5)
 
 graph.display()
-console.log(graph.hasEdge("C","A"));
-graph.removeVertex("B")
+console.log(graph.hasEdge(8,7));
+graph.removeVertex(5)
 graph.display()

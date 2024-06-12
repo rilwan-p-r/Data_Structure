@@ -42,9 +42,10 @@ class hashTable{
         // this.table[index] = undefined
         const bucket = this.table[index]
         if(bucket){
-            let sameKey = bucket.find(item=>item[0]===key)
-            if(sameKey){
-                bucket.splice(bucket.indexOf(sameKey),1)
+            let sameKeyArray = bucket.find(item=>item[0]===key)//[[k,v],[]]
+            console.log('kkk',sameKeyArray);
+            if(sameKeyArray ){
+                bucket.splice(bucket.indexOf(sameKeyArray),1)
             }
         }
     }
@@ -69,3 +70,4 @@ table.set("mane","shamis")
 
 table.display()
 console.log(table.get('mane'));
+

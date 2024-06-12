@@ -135,17 +135,19 @@ tree.insert(5)
 tree.insert(7)
 tree.insert(15)
 tree.insert(3)
-// tree.insert(7)
 tree.inorder(tree.root)
-console.log(tree.search(tree.root,22));
-console.log(tree.delete(7));
+// tree.insert(7)
 // tree.inorder(tree.root)
-function treee(arr){
-    let tree1=new binaryTree()
-    for(let ar of arr){
-        tree1.insert(ar)
-    }
-    console.log(tree1.max(tree1.root));
-}
-let arr=[4,3,2,5,3]
-treee(arr)
+// console.log(tree.search(tree.root,22));
+// console.log(tree.delete(7));
+// // tree.inorder(tree.root)
+// function treee(arr){
+//     let tree1=new binaryTree()
+//     for(let ar of arr){
+//         tree1.insert(ar)
+//     }
+//     console.log(tree1.max(tree1.root));
+// }
+// let arr=[4,3,2,5,3]
+// treee(arr)
+console.log(tree.min(tree.root))

@@ -192,7 +192,7 @@ printReverse(){
         while(curr){
             print += `${curr.value} `
             curr = curr.prev
-        }
+        }   
         console.log(print);
     }
 }

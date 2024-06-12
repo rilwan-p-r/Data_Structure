@@ -6,7 +6,7 @@ class trieNode{
 }
 
 class Trie{
-    constructor(){
+    constructor(){      
         this.root= new trieNode()
     }
 
